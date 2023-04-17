@@ -1,6 +1,6 @@
 const Profile = () => (
   <>
-    <section className="mt-5 bg-primary">
+    <section>
       <h1>Profile</h1>
     </section>
   </>
