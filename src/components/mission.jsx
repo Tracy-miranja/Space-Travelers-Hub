@@ -32,13 +32,13 @@ const Mission = () => {
                 <td>{item.mission_name}</td>
                 <td>{item.description}</td>
                 <td>
-                  <Button as="a" variant="primary">
-                    Button as link
+                  <Button as="a" variant="primary" className="button">
+                    Active Member
                   </Button>
                 </td>
                 <td>
-                  <Button as="a" variant="primary">
-                    Button as link
+                  <Button variant="primary" className="button">
+                    Leave Mission
                   </Button>
                 </td>
               </tr>

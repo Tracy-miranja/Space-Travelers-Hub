@@ -1,0 +1,19 @@
+.table-bordered {
+    border: 2px solid #dee2e6;
+    padding: 20px;
+  }
+  
+  .table-bordered thead th {
+    border: 2px solid #dee2e6
+  }
+  
+  .table-bordered td,
+  .table-bordered th {
+    border: 2px solid #dee2e6;
+  }
+
+  .button{
+    font-size: 12px;
+    width: fit-content;
+  }
+  
