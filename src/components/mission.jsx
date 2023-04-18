@@ -16,7 +16,7 @@ const Mission = () => {
   }
 
   return (
-    <>
+    <section className="table">
       <table className="table-bordered">
         <thead>
           <tr>
@@ -46,7 +46,7 @@ const Mission = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </section>
   );
 };
 
