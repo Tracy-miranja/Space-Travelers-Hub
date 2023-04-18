@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import { getMissions } from '../redux/Mission/MissionsSlice';
 
 const Mission = () => {
@@ -16,13 +17,35 @@ const Mission = () => {
 
   return (
     <>
-      <h1>Missions</h1>
-      {mission.map((item) => (
-        <div key={item.mission_id}>
-          <h4>{item.mission_name}</h4>
-          <p>{item.description}</p>
-        </div>
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mission.map((item) => (
+            <>
+              <tr key={item.mission_id}>
+                <td>{item.mission_name}</td>
+                <td>{item.description}</td>
+                <td>
+                  <Button as="a" variant="primary">
+                    Button as link
+                  </Button>
+                </td>
+                <td>
+                  <Button as="a" variant="primary">
+                    Button as link
+                  </Button>
+                </td>
+              </tr>
+            </>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };
