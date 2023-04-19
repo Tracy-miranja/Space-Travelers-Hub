@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import { getMissions } from '../redux/Mission/MissionsSlice';
+import { Button, Badge } from 'react-bootstrap';
+import { getMissions, joinMission, leaveMission } from '../redux/Mission/MissionsSlice';
 
 const Mission = () => {
   const { mission, loading } = useSelector((state) => state.mission);
@@ -27,22 +27,30 @@ const Mission = () => {
         </thead>
         <tbody>
           {mission.map((item) => (
-            <>
-              <tr key={item.mission_id}>
-                <td>{item.mission_name}</td>
-                <td>{item.description}</td>
-                <td>
-                  <Button as="a" variant="primary" className="button">
-                    Active Member
-                  </Button>
-                </td>
-                <td>
-                  <Button variant="primary" className="button">
+            <tr key={item.mission_id}>
+              <td>{item.mission_name}</td>
+              <td>{item.description}</td>
+              <td>
+                {item.reserved ? (
+                  <Button variant="primary" className="button" onClick={() => dispatch(leaveMission(item.mission_id))}>
                     Leave Mission
                   </Button>
-                </td>
-              </tr>
-            </>
+                ) : (
+                  <Button variant="primary" className="button">
+                    Not A Member
+                  </Button>
+                )}
+              </td>
+              <td>
+                {item.reserved ? (
+                  <Badge variant="success">Active Member</Badge>
+                ) : (
+                  <Button variant="primary" className="button" onClick={() => dispatch(joinMission(item.mission_id))}>
+                    Join Mission
+                  </Button>
+                )}
+              </td>
+            </tr>
           ))}
         </tbody>
       </table>
