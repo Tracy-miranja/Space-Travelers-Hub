@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from '../Redux/store';
 import Mission from '../components/mission';
 
-it('renders Mission correctly', () => {
+it('renders Mission name and decription ', () => {
   const tree = renderer
     .create(
       <React.StrictMode>
