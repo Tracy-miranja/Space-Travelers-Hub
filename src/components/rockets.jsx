@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getRocket, toggleReservedState } from '../redux/Rocket/RocketsSlice';
 import './rockets.scss';
+import load from './assets/loader.gif';
 
 const Rockets = () => {
   const { rockets, loading } = useSelector((state) => state.rockets);
@@ -12,7 +13,11 @@ const Rockets = () => {
   }, [dispatch]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <img className="loader" src={load} alt="loading..." />
+      </div>
+    );
   }
 
   return (

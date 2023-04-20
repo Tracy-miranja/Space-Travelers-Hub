@@ -1,5 +1,13 @@
 $primary-color: #fff;
 
+.loader {
+  width: 150px;
+  display: flex;
+  margin-top: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 section {
   hr {
     margin-top: 40px;
@@ -21,11 +29,6 @@ section {
       background-color: rgb(57, 140, 188);
       color: $primary-color;
       border-radius: 4px;
-    }
-
-    .reserved:hover {
-      background-color: rgb(57, 140, 188);
-      color: $primary-color;
     }
   }
 }
