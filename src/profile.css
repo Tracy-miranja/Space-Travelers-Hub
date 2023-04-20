@@ -1,0 +1,12 @@
+.r1 {
+  background-color: red;
+}
+
+.first-row {
+  /* width: 50px; */
+  text-align: center;
+}
+
+.container-fluid {
+  display: flex;
+}

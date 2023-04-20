@@ -43,7 +43,7 @@ const Mission = () => {
               </td>
               <td>
                 {item.reserved ? (
-                  <Badge variant="success">Active Member</Badge>
+                  <Badge variant="success" as="Button">Active Member</Badge>
                 ) : (
                   <Button variant="primary" className="button" onClick={() => dispatch(joinMission(item.mission_id))}>
                     Join Mission
