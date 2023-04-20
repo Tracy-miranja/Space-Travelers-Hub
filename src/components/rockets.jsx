@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getRocket } from '../redux/Rocket/RocketsSlice';
+import { getRocket, toggleReservedState } from '../redux/Rocket/RocketsSlice';
 import './rockets.scss';
 
 const Rockets = () => {
@@ -28,10 +28,18 @@ const Rockets = () => {
               <div className="col col-9 mt-2">
                 <h4>{item.name}</h4>
                 <p>
-                  <button type="submit" className="btn reserved me-2">Reserved</button>
+                  {item.reserved && <span className="reservedBadge">Reserved</span>}
                   {item.description}
                 </p>
-                <button type="submit" className="btn btn-primary btn-lg">Reserve Rocket</button>
+                <button
+                  onClick={() => {
+                    dispatch(toggleReservedState(item.id));
+                  }}
+                  type="submit"
+                  className={item.reserved ? 'cancelBtn btn btn-outline-secondary btn-lg' : 'reservedBtn btn btn-primary btn-lg'}
+                >
+                  {item.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+                </button>
               </div>
             </div>
           </div>
