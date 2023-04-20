@@ -25,17 +25,18 @@ const rocketsSlice = createSlice({
       state.rockets = newRockets;
     },
   },
-  extraReducers: {
-    [getRocket.pending]: (state) => {
-      state.loading = true;
-    },
-    [getRocket.fulfilled]: (state, action) => {
-      state.loading = false;
-      state.rockets = action.payload;
-    },
-    [getRocket.rejected]: (state) => {
-      state.loading = false;
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getRocket.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getRocket.fulfilled, (state, action) => {
+        state.loading = false;
+        state.rockets = action.payload;
+      })
+      .addCase(getRocket.rejected, (state) => {
+        state.loading = false;
+      });
   },
 });
 
