@@ -26,37 +26,32 @@ const Profile = () => {
   }, [dispatch]);
 
   return (
-    <div className="profile-container">
+    <div className="profile-container d-flex">
       <div className="mission-list">
         <h2>My Missions</h2>
         <table className="profile-table">
           <thead>
-            <tr>
-              <th>Mission Name</th>
-            </tr>
+            <tr />
           </thead>
           <tbody>
             {joinedMissions.map((m) => (
               <tr key={m.mission_id}>
-                <td>{m.mission_name}</td>
+                <td className="profile-row">{m.mission_name}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
       <div className="rocket-list">
-        <h2>Reserved Rockets</h2>
+        <h2>My Rockets</h2>
         <table className="profile-table">
           <thead>
-            <tr>
-              <th>Rocket Name</th>
-              <th>Details</th>
-            </tr>
+            <tr />
           </thead>
           <tbody>
             {reservedRockets.map((m) => (
               <tr key={m.reserved_rocket_id}>
-                <td>{m.reserved_rocket_name}</td>
+                <td className="profile-row">{m.reserved_rocket_name}</td>
               </tr>
             ))}
           </tbody>

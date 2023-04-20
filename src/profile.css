@@ -1,12 +1,17 @@
-.r1 {
-  background-color: red;
+.profile-table{
+  border: 2px solid gainsboro;
 }
 
-.first-row {
-  /* width: 50px; */
-  text-align: center;
+.profile-row{
+  border: 2px solid gainsboro;
+  width: 700px;
 }
 
-.container-fluid {
-  display: flex;
+.mission-list{
+  width: 50%;
+}
+
+.profile-container{
+  width: 100%;
+  padding: 20px;
 }
