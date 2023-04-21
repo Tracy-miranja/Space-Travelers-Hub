@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const missionURL = 'https://api.spacexdata.com/v3/missions';
