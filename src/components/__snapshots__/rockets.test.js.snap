@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets should match the snapshot 1`] = `
+<div>
+  <img
+    alt="loading..."
+    class="loader"
+    src="loader.gif"
+  />
+</div>
+`;
