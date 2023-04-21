@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { Button, Badge } from 'react-bootstrap';
 import { getMissions, joinMission, leaveMission } from '../redux/Mission/MissionsSlice';
-import './mission.scss';
 
 const Mission = () => {
   const { mission, loading } = useSelector((state) => state.mission);
