@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-<!--   <img src="logo-orange.png" alt="logo" width="140"  height="auto" /> -->
+<img src="./screenshot.png" alt="TracyMiranja SamTush project" width="auto" />
   <br/>
 
   <h1><b>Space Traveler's Hub</b></h1>
