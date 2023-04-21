@@ -1,0 +1,25 @@
+nav {
+  .logo {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .navbar-collapse {
+    .nav-link {
+      color: rgb(60, 115, 218);
+    }
+
+    .vl-div {
+      margin-top: auto;
+      margin-bottom: auto;
+
+      .vl {
+        border-left: 2px solid #252525;
+        height: 20px;
+      }
+    }
+  }
+}
