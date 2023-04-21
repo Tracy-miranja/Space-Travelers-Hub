@@ -180,6 +180,6 @@ I would like to thank the contributors of this project, Microverse and anyone se
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/Tracy-miranja/space-travelers-hub/blob/feature/setup/LICENCE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
