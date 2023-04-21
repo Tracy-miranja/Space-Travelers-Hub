@@ -1,0 +1,17 @@
+.profile-table {
+  border: 2px solid gainsboro;
+}
+
+.profile-row {
+  border: 2px solid gainsboro;
+  width: 700px;
+}
+
+.mission-list {
+  width: 50%;
+}
+
+.profile-container {
+  width: 100%;
+  padding: 20px;
+}
