@@ -24,3 +24,28 @@ exports[`renders Mission correctly 1`] = `
   </table>
 </section>
 `;
+
+exports[`renders Mission name and decription  1`] = `
+<section
+  className="table"
+>
+  <table
+    className="table-bordered"
+  >
+    <thead>
+      <tr>
+        <th>
+          Mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Status
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</section>
+`;
