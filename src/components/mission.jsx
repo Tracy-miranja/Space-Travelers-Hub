@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { Button, Badge } from 'react-bootstrap';
 import { getMissions, joinMission, leaveMission } from '../redux/Mission/MissionsSlice';
+import './mission.scss';
 
 const Mission = () => {
   const { mission, loading } = useSelector((state) => state.mission);
@@ -32,11 +33,11 @@ const Mission = () => {
               <td>{item.description}</td>
               <td>
                 {item.reserved ? (
-                  <Button variant="primary" className="button" onClick={() => dispatch(leaveMission(item.mission_id))}>
+                  <Button variant="primary" className="button btn btn-lg" onClick={() => dispatch(leaveMission(item.mission_id))}>
                     Leave Mission
                   </Button>
                 ) : (
-                  <Button variant="primary" className="button">
+                  <Button variant="primary" className="button btn btn-lg">
                     Not A Member
                   </Button>
                 )}
